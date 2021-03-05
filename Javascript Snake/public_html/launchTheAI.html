@@ -1,0 +1,51 @@
+
+  <head>
+    <title>Javascript Snakey Boi - AI Edition</title>
+    <link rel="stylesheet" href="style/style.css">
+  </head>
+    <style type ="text/css" >
+      .footer{ 
+       position: fixed;     
+       top: 3%;
+       left: 60%;
+       width: 100%;
+       font-size: 60px;
+       color: white;
+    }  
+    .explain{
+       position: fixed;     
+       top: 15%;
+       left: 49%;
+       width: 50%;
+       font-size: 17px;
+       color: white;
+       word-wrap: break-word;
+    }
+    </style>
+    <div class="footer">Javascript Snakey Boi</div>
+    <div class="explain">
+        Q-Learning is a simple way for agents to learn how to act
+        optimally in controlled Markovian domains. 
+        In simple terms, it uses a MDP (Markov Decision Process) 
+        to control and make decisions in an environment. It consists 
+        of a Q-Table that is constantly updated.</div>
+    
+    
+    <div id="fieldsWrapper">
+      <div id="chart"></div>
+      <div id="status">
+        <p>generation<br><span id="generation">0</span></p>
+      </div>
+    </div>
+
+    <script src="lib/neataptic.min.js"></script>
+    <script src="lib/p5.min.js"></script>
+    <script src="lib/frappe-charts.min.iife.js"></script>
+
+    <script src="src/snake.js"></script>
+    <script src="src/food.js"></script>
+    <script src="src/field.js"></script>
+    <script src="src/ai.js"></script>
+    <script src="src/main.js"></script>
+  </body>
+

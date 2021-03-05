@@ -1,0 +1,46 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body, #top {
+  background: #000;
+}
+
+#fieldsWrapper {
+  width: 1900px;
+  position: fixed;
+  left: 50px;
+  width: 100%;
+}
+
+#top {
+  overflow: hidden;
+  height: 200px;
+}
+
+#chart, #status {
+  float: top;
+}
+
+#chart {
+  height: 40px;
+  width: 600px;
+}
+
+#status {
+  width: 200px;
+  height: 180px;
+}
+
+#status p {
+  margin-left: 600px;
+  text-align: right;
+  font-size: 30px;
+  color: white;
+}
+
+canvas {
+  border: 1px solid #EEE;
+  margin: 0 1px 1px 0;
+} 
