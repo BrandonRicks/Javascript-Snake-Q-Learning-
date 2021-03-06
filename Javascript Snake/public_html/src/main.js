@@ -7,14 +7,16 @@ const FRAME_RATE = 18;
 // game bottlenecks
 
 // neural network settings
-const MUTATION_RATE = 0.5;
+const MUTATION_RATE = 0.2;
 const ELITISM = Math.round(0.1 * GAMES);
 
 // score settings
 const POINTS_MOVED_TOWARDS_FOOD = 1;
 const POINTS_MOVED_AGAINST_FOOD = -1.5;
 const POINTS_ATE_FOOD = 2;
-const MAX_TURNS = 50000;
+const POINTS_HIT_WALL = -10;
+const POINTS_HIT_TAIL = -50;
+const MAX_TURNS = 10000000;
 const LOWEST_SCORE_ALLOWED = -30;
 
 // neataptic framework call
@@ -70,7 +72,9 @@ const ai = new Ai({
   score: {
     getCloserToTheFood: POINTS_MOVED_TOWARDS_FOOD,
     getAwayFromFood: POINTS_MOVED_AGAINST_FOOD,
-    ateFood: POINTS_ATE_FOOD
+    ateFood: POINTS_ATE_FOOD,
+    snakeHitWall: POINTS_HIT_WALL,
+    snakeHitTail: POINTS_HIT_TAIL
   },
   onEndGeneration: ({generation, max, avg, min}) => {
     chartData.labels.push(generation.toString());

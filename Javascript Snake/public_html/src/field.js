@@ -20,7 +20,7 @@ class Field {
     }
     
     const field = this;
-
+    
     new p5(p => {
       p.setup = () => {
         p.frameRate(field.frameRate);
@@ -67,7 +67,12 @@ class Field {
     const gameLastedLongEnough = this.turns > this.maxTurns;
     const scoreTooLow = this.snake.brain.score <= this.lowestScoreAllowed;
 
-    if (snakeHitWall || snakeHitTail || noMoreRoomLeft || gameLastedLongEnough || scoreTooLow) {
+    if (snakeHitWall || noMoreRoomLeft || gameLastedLongEnough || scoreTooLow) {
+      this.snake.brain.score += this.snake.scoreModifiers.snakeHitWall;
+      this.status = 'GAME_OVER';
+    } 
+    else if (snakeHitTail) {
+      this.snake.brain.score += this.snake.scoreModifiers.snakeHitTail;
       this.status = 'GAME_OVER';
     }
   }

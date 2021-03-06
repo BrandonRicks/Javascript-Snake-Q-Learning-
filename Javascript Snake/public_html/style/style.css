@@ -25,7 +25,7 @@ body, #top {
 
 #chart {
   height: 40px;
-  width: 600px;
+  width: 800px;
 }
 
 #status {
@@ -34,9 +34,10 @@ body, #top {
 }
 
 #status p {
-  margin-left: 600px;
+  margin-left: 660px;
+  margin-top: -42px;
   text-align: right;
-  font-size: 30px;
+  font-size: 20px;
   color: white;
 }
 
